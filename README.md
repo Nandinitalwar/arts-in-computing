@@ -3,6 +3,8 @@ final project
 
 ## Artist’s statement
 
+
+
 The way we dance alone in our room listening to music is significantly different from how we dance out in public. The fear of being judged hinders us from being ourselves. 
 
 Our project is an interactive experience that challenges the participant to enjoy a moment without judgment. Our project captures free flowing movements and produces sound as a response. Depending how one moves, the sound will change accordingly. 
@@ -10,8 +12,6 @@ Our project is an interactive experience that challenges the participant to enjo
 Participants are blindfolded. By taking away the ability to see, we encourage our participants to focus on senses other than sight, be vulnerable, and enjoy their own presence. Participants are also given headphones in order to fully immerse themselves in the moment and hear the sounds correlated to their movements. This experience is truly for the participant. It is creating a candid moment in a public space. We are giving you, the participant, the power to create, and capture your truest moments. 
 
 ## What it does
-
-![tp-whiteboard-1](https://user-images.githubusercontent.com/42789360/146461391-65b976e7-4666-4854-9963-ca8b37f9d982.jpg)
 
 The program plays a sine wave that changes in frequency as the user’s acceleration changes in 3D by calculating the pitch and roll of their movement using accelerometer data. Once the user wears a jacket with the sensors and arduino, and as they move, rotation and acceleration data is sent over WiFi. My program reads the data, parses the input, creates a JSON object with relevant information, pipes that data to a web server, and opens a WebAudio program that listens to the port. The Web Audio program receives that information, and the frequency changes as a real-time response.
 
@@ -21,6 +21,7 @@ Hardwork, collaboration, and obstinate persistence :’)
 
 ## Challenges I ran into
 
+![tp-whiteboard-1](https://user-images.githubusercontent.com/42789360/146461391-65b976e7-4666-4854-9963-ca8b37f9d982.jpg)
 
 
 The challenging part of this project was connecting two Python scripts, where the first was reading the MPU-6050 data (“reader.py”) and the second was sending data to a web server (“server.py”). I had to pipe this data from script one to script two in real-time.
