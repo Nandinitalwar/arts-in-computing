@@ -36,7 +36,10 @@ I also faced a series of trivial errors but found it joyful to discover new thin
  
 ## Accomplishments that I'm proud of
 
-I’m proud that I was able to send the data in real-time to the server and calculate the roll and pitch of the user’s movements! 
+I’m proud that I was able to send the data in real-time to the server and calculate the roll and pitch of the user’s movements! I used the following diagram to decode how to calculate it.
+
+![roll-pitch-yaw](https://user-images.githubusercontent.com/42789360/146461533-ecdd2e43-e321-4f7f-8532-dec4a80e848c.png)
+
 
 ## What I learned
 
