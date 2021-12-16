@@ -1,7 +1,7 @@
 # arts-in-computing
 final project 
-Move…. Like nobody’s watching
-Artist’s statement 
+
+##Artist’s statement
 
 The way we dance alone in our room listening to music is significantly different from how we dance out in public. The fear of being judged hinders us from being ourselves. 
 
