@@ -61,3 +61,7 @@ https://www.youtube.com/watch?v=p7tjtLkIlFo
 https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
 
 
+## Group pic!!!!
+
+![20211202_193829](https://user-images.githubusercontent.com/42789360/146461694-5b7bf607-0bc8-4f57-a746-b6b28cfa0b29.jpg)
+
