@@ -38,7 +38,7 @@ I also faced a series of trivial errors but found it joyful to discover new thin
 
 I’m proud that I was able to send the data in real-time to the server and calculate the roll and pitch of the user’s movements! I used the following diagram to decode how to calculate it.
 
-![roll-pitch-yaw](https://user-images.githubusercontent.com/42789360/146461533-ecdd2e43-e321-4f7f-8532-dec4a80e848c.png =250x250)
+![roll-pitch-yaw](https://user-images.githubusercontent.com/42789360/146461533-ecdd2e43-e321-4f7f-8532-dec4a80e848c.png)
 
 
 ## What I learned
@@ -63,5 +63,5 @@ https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
 
 ## Group pic!!!!
 
-![20211202_193829](https://user-images.githubusercontent.com/42789360/146461694-5b7bf607-0bc8-4f57-a746-b6b28cfa0b29.jpg =250x250)
+![20211202_193829](https://user-images.githubusercontent.com/42789360/146461694-5b7bf607-0bc8-4f57-a746-b6b28cfa0b29.jpg)
 
