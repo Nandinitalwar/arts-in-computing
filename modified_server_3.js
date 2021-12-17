@@ -53,22 +53,22 @@ function initFM() {
         //what values should updateFreq and updateIndex ideally move between?
         //problem: could not find the origin
         if (pitch > 30) {
-        updateFreq(val_x);
-        updateIndex(val_z);
+        updateFreq(1);
+        updateIndex(Math.abs(val_z)*500);
         //updateFreq(roll)
         //updateIndex(pitch);
         }
     
         if (pitch < 30) {
-            //updateIndex(roll)
-            //updateFreq(pitch)
-            updateFreq(val_z);
-            updateIndex(val_y);
+            //updateFreq(val_z);
+            //updateIndex(val_y);
+            updateFreq(1);
+            updateIndex(Math.abs(val_y)*500);
         }
 
         if (roll < 30){
             updateFreq(val_x);
-            updateIndex(val_y);
+            updateIndex(Math.abs(val_y)*500);
         }
     }
 }
@@ -107,10 +107,12 @@ function loadSound(url, sourceName) {
 
 
 //changing how much the frequency changes
+//values range between 1 and 1000.
 function updateFreq(val) {
     modulatorFreq.frequency.value = val;
 };
 //changing how much the amplitude of the frequency changes
+//values range between 1 and 1000.
 function updateIndex(val) {
     modulationIndex.gain.value = val;
 };
