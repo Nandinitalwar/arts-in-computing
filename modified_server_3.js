@@ -3,7 +3,8 @@ const evtSource = new EventSource("http://0.0.0.0:8889", { } );
 var audioCtx;
 var modulatorFreq;
 var modulationIndex;
-
+var pitch;
+var roll;
 
 evtSource.onmessage = function(event) {
   const parsed_data = JSON.parse(event.data)
@@ -11,19 +12,38 @@ evtSource.onmessage = function(event) {
   val_y = parsed_data.y
   val_z = parsed_data.z
   const g = 9.81;
-  var pitch = (Math.asin(Math.abs(parsed_data.x)/g))*(180/Math.PI);
+   pitch = (Math.asin(Math.abs(parsed_data.x)/g))*(180/Math.PI);
   console.log("pitch in degrees: " + pitch); 
   //in the pitch, y values are constant
   console.log("X : " + parsed_data.x);
   console.log("Y :" + parsed_data.y);
   console.log("Z :" +parsed_data.z);
-  var roll = (Math.atan(Math.abs(parsed_data.y)/Math.abs(parsed_data.z)))*(180/Math.PI);
+   roll = (Math.atan(Math.abs(parsed_data.y)/Math.abs(parsed_data.z)))*(180/Math.PI);
   //in the roll, x values are constant
   console.log("roll in degrees: " + roll);
   //loadSound("santa_tell_me.mp3", "kick");
   //it is not possible to calculate the yaw 
   modulatorFreq.frequency.value = 100;
   modulatorFreq.frequency.value = val_x;
+
+  if (pitch > 30) {
+    updateFreq(1);
+    updateIndex(Math.abs(val_z)*100);
+    //updateFreq(roll)
+    //updateIndex(pitch);
+    }
+
+    if (pitch < 30) {
+        //updateFreq(val_z);
+        //updateIndex(val_y);
+        updateFreq(1);
+        updateIndex(Math.abs(val_y)*100);
+    }
+
+    if (roll < 30){
+        updateFreq(val_x);
+        updateIndex(Math.abs(val_y)*100);
+    }
 
 }
 function initFM() {
@@ -49,28 +69,11 @@ function initFM() {
     
     carrier.start();
     modulatorFreq.start();
-    while (true) {
+    /*while (true) {
         //what values should updateFreq and updateIndex ideally move between?
         //problem: could not find the origin
-        if (pitch > 30) {
-        updateFreq(1);
-        updateIndex(Math.abs(val_z)*500);
-        //updateFreq(roll)
-        //updateIndex(pitch);
-        }
-    
-        if (pitch < 30) {
-            //updateFreq(val_z);
-            //updateIndex(val_y);
-            updateFreq(1);
-            updateIndex(Math.abs(val_y)*500);
-        }
-
-        if (roll < 30){
-            updateFreq(val_x);
-            updateIndex(Math.abs(val_y)*500);
-        }
-    }
+        
+    }*/
 }
 
 /**
